@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet.ShowAll example</title>
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="..//L.Control.ShowAll.css" rel="stylesheet" />
+	<!--[if lt IE 9]>
+		<link href="..//L.Control.ShowAll.ie.css" rel="stylesheet" />
+	<![endif]-->
+    
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+		#map {
+            position: relative;
+            height: 90%;
+        }
+        #info {
+            position: relative;
+            height: 10%;
+            border: 5px black dotted;
+            text-align: center;
+            background: lightgray;
+        }
+	</style>
+</head>
+<body>
+
+    <div id="container">
+        <div id="map"></div>
+        <div id="info">
+            This is an example page for <a href="http://github.com/florpor/Leaflet.ShowAll">Leaflet.ShowAll</a>. 
+            Check out the source code, it's super simple!<br>
+            Leaflet.ShowAll allows you to zoom out to show the entire area, then zoom back in to the same view you were just at. You can move around
+            while in show-all mode, but if you zoom in or out you're out of show-all and your previous view is lost. Here you can also double-click
+            on the marker to go back to the original view.
+        </div>
+    </div>
+
+    <script src="../L.Control.ShowAll.js"></script>
+	<script>
+        // create leaflet map with osm tiles
+        var map = L.map('map', { scrollWheelZoom: true, attributionControl: false });
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+				maxZoom: 18,
+				attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
+        
+		// add show-all
+        L.control.showAll({bounds: L.latLngBounds(L.latLng(50.725746, -4.726885), L.latLng(52.878810, 1.595746))}).addTo(map);
+        
+        // check out stonehenge
+        var stonehenge = L.latLng(51.178885, -1.826205);
+        map.setView(stonehenge, 16);
+        
+        var mark = L.marker(stonehenge).addTo(map);
+        mark.on('dblclick', function(e) {
+            map.setView(stonehenge, 16);
+        });
+	</script>
+</body>
+</html>
