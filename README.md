@@ -13,7 +13,7 @@ All the plugin takes is one line of code to add:
 ## Options
 Customizable options are:
 
-`bounds`: The only option that MUST be supplied. Needs to be a latLngBounds that defines the bounds to show when show all button is clicked.
-`position`: The standard Leaflet.Control position parameter, used like all the other controls. Default: 'topleft'.
-`title`: The tooltip shown when the user hovers over the button. Default: 'Show All'.
-`icon`: The icon to be shown on the button. Default: 'icon-show-all' (taken from Elusive font by Aristeides Stathopoulos(c) using [fontello](http://fontello.com). See [LICENSE](LICENSE)).
+ `bounds`: The only option that MUST be supplied. Needs to be a latLngBounds that defines the bounds to show when show all button is clicked.
+ `position`: The standard Leaflet.Control position parameter, used like all the other controls. Default: 'topleft'.
+ `title`: The tooltip shown when the user hovers over the button. Default: 'Show All'.
+ `icon`: The icon to be shown on the button. Default: 'icon-show-all' (taken from Elusive font by Aristeides Stathopoulos(c) using [fontello](http://fontello.com). See [font/LICENSE.txt](font/LICENSE.txt)).
