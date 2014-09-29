@@ -1,6 +1,6 @@
 L.Control.ShowAll = L.Control.extend({
     options: {
-        bounds: [], // bounds to show in show-all mode
+        bounds: null, // bounds to show in show-all mode
         position: 'topleft',
         title: 'Show All', // tooltip
         icon: 'icon-show-all', // button icon
@@ -29,7 +29,6 @@ L.Control.ShowAll = L.Control.extend({
         L.DomEvent.on(this.link, 'click', this.onClick, this)
             .on(this.link, 'dblclick', L.DomEvent.stopPropagation);
         
-        this._map = map;
         this._container = container;
         
         // event hooks
