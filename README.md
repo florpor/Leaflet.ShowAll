@@ -17,3 +17,6 @@ Customizable options are:
 + `position`: The standard Leaflet.Control position parameter, used like all the other controls. Default: 'topleft'.
 + `title`: The tooltip shown when the user hovers over the button. Default: 'Show All'.
 + `icon`: The icon to be shown on the button. Default: 'icon-show-all' (taken from Elusive font by Aristeides Stathopoulos(c) using [fontello](http://fontello.com). See [font/LICENSE.txt](font/LICENSE.txt)).
+
+## Compatibility
+Leaflet.ShowAll has only been tested against the current latest LeafletJS release - 0.7.3. If you test it against other versions, please let me know what the results are :-)
