@@ -13,10 +13,6 @@
 	color: #2074B6;
 }
 
-.leaflet-control-showall.active.following a {
-	color: #FC8428;
-}
-
 .leaflet-touch .leaflet-control-showall {
 	box-shadow: none;
 	border: 2px solid rgba(0,0,0,0.2);
